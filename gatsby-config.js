@@ -7,6 +7,14 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 module.exports = {
   siteMetadata: {
     siteTitleAlt: `Yazan Monshed Blog`,
+    siteTitle: `Yazan Monshed`,
+    siteUrl: `https://blog.yazanmonshed.com/`,
+    siteHeadline: `personal blog for yazan monshed`,
+    siteDescription: `this is personal blog`,
+    siteLanguage: `en`,
+    siteImage: `/favicon.ico`,
+    author: `@yazanmonshed`,
+
   },
   plugins: [
     {
@@ -29,8 +37,8 @@ module.exports = {
             url: `https://twitter.com/yazanmonshed`,
           },
           {
-            name: `Instagram`,
-            url: `https://www.instagram.com/`,
+            name: `linkedin`,
+            url: `https://www.linkedin.com/u/yazanmonshed`,
           },
         ],
       },
@@ -46,8 +54,8 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        short_name: `blog - yazan monshed`,
+        description: `this is personal blog`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,
