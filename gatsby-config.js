@@ -12,7 +12,7 @@ module.exports = {
     siteHeadline: `personal blog for yazan monshed`,
     siteDescription: `this is personal blog`,
     siteLanguage: `en`,
-    siteImage: `/favicon.ico`,
+    siteImage: `./favicon.ico`,
     author: `@yazanmonshed`,
 
   },
@@ -39,6 +39,10 @@ module.exports = {
           {
             name: `linkedin`,
             url: `https://www.linkedin.com/u/yazanmonshed`,
+          },
+          {
+            name: `Github`,
+            url: `https://github.com/yazanmonshed`,
           },
         ],
       },
