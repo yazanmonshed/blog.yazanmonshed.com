@@ -199,8 +199,8 @@ var plugins = [{
   options: {
     "plugins": [],
     "name": "minimal-blog - @lekoarts/gatsby-theme-minimal-blog",
-    "short_name": "minimal-blog",
-    "description": "Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.",
+    "short_name": "blog - yazan monshed",
+    "description": "this is personal blog",
     "start_url": "/",
     "background_color": "#fff",
     "theme_color": "#6B46C1",
@@ -78850,7 +78850,7 @@ module.exports = function(module) {
 /*! exports provided: data, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"data\":{\"minimalBlogConfig\":{\"basePath\":\"/\",\"blogPath\":\"/blog\",\"postsPath\":\"content/posts\",\"pagesPath\":\"content/pages\",\"tagsPath\":\"/tags\",\"externalLinks\":[{\"name\":\"Twitter\",\"url\":\"https://twitter.com/yazanmonshed\"},{\"name\":\"Instagram\",\"url\":\"https://www.instagram.com/\"}],\"navigation\":[{\"title\":\"Blog\",\"slug\":\"/blog\"},{\"title\":\"About\",\"slug\":\"/about\"}],\"showLineNumbers\":true,\"showCopyButton\":true}}}");
+module.exports = JSON.parse("{\"data\":{\"minimalBlogConfig\":{\"basePath\":\"/\",\"blogPath\":\"/blog\",\"postsPath\":\"content/posts\",\"pagesPath\":\"content/pages\",\"tagsPath\":\"/tags\",\"externalLinks\":[{\"name\":\"Twitter\",\"url\":\"https://twitter.com/yazanmonshed\"},{\"name\":\"linkedin\",\"url\":\"https://www.linkedin.com/u/yazanmonshed\"}],\"navigation\":[{\"title\":\"Blog\",\"slug\":\"/blog\"},{\"title\":\"About\",\"slug\":\"/about\"}],\"showLineNumbers\":true,\"showCopyButton\":true}}}");
 
 /***/ }),
 
