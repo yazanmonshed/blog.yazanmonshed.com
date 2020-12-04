@@ -10,7 +10,7 @@ module.exports = {
     siteTitle: `Yazan Monshed`,
     siteUrl: `https://blog.yazanmonshed.com/`,
     siteHeadline: `personal blog for yazan monshed`,
-    siteDescription: `this is personal blog`,
+    siteDescription: `my personal blog write about technology and everything in my mind`,
     siteLanguage: `en`,
     siteImage: `./favicon.ico`,
     author: `@yazanmonshed`,
@@ -38,7 +38,7 @@ module.exports = {
           },
           {
             name: `linkedin`,
-            url: `https://www.linkedin.com/u/yazanmonshed`,
+            url: `https://www.linkedin.com/in/yazanmonshed/`,
           },
           {
             name: `Github`,
@@ -85,7 +85,7 @@ module.exports = {
       options: {
         analyzerMode: `static`,
         reportFilename: `_bundle.html`,
-        openAnalyzer: false,
+        openAnalyzer: true,
       },
     },
   ].filter(Boolean),
