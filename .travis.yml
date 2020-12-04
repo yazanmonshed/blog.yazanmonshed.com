@@ -1,20 +1,21 @@
 language: node_js
-
 node_js:
   - "stable"
-  - "lts/*"
-
-branches:
-  only:
-    - main
-
 cache:
   directories:
   - node_modules
-
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: 429912b9ee48dc2445d14da5b11ce1f8eb0e82f3
+  local_dir: public
+  keep-history: true
+  on:
+    branch: main
 before_script:
-  - "npm i -g gatsby-cli"
-  - "yarn"
-
+  - "npm i -g gatsby"
+  - "npm i"
 script:
-  - gatsby build
+  - "npm run test"
+after_success:
+  - "npm run deploy"
