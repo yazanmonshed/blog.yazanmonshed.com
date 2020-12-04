@@ -78850,7 +78850,7 @@ module.exports = function(module) {
 /*! exports provided: data, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"data\":{\"minimalBlogConfig\":{\"basePath\":\"/\",\"blogPath\":\"/blog\",\"postsPath\":\"content/posts\",\"pagesPath\":\"content/pages\",\"tagsPath\":\"/tags\",\"externalLinks\":[{\"name\":\"Twitter\",\"url\":\"https://twitter.com/yazanmonshed\"},{\"name\":\"linkedin\",\"url\":\"https://www.linkedin.com/u/yazanmonshed\"},{\"name\":\"Github\",\"url\":\"https://github.com/yazanmonshed\"}],\"navigation\":[{\"title\":\"Blog\",\"slug\":\"/blog\"},{\"title\":\"About\",\"slug\":\"/about\"}],\"showLineNumbers\":true,\"showCopyButton\":true}}}");
+module.exports = JSON.parse("{\"data\":{\"minimalBlogConfig\":{\"basePath\":\"/\",\"blogPath\":\"/blog\",\"postsPath\":\"content/posts\",\"pagesPath\":\"content/pages\",\"tagsPath\":\"/tags\",\"externalLinks\":[{\"name\":\"Twitter\",\"url\":\"https://twitter.com/yazanmonshed\"},{\"name\":\"linkedin\",\"url\":\"https://www.linkedin.com/in/yazanmonshed/\"},{\"name\":\"Github\",\"url\":\"https://github.com/yazanmonshed\"}],\"navigation\":[{\"title\":\"Blog\",\"slug\":\"/blog\"},{\"title\":\"About\",\"slug\":\"/about\"}],\"showLineNumbers\":true,\"showCopyButton\":true}}}");
 
 /***/ }),
 
