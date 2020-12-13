@@ -11,7 +11,5 @@ deploy:
   on:
     branch: main
 before_script:
-  - "npm i -g gatsby"
-  - "npm install"
-script:
-  - "npm run test"
+  - "yarn add gobal gatsby"
+  - "yarn install"
