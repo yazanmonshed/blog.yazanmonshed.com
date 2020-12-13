@@ -5,12 +5,13 @@ cache:
   directories:
   - node_modules
 deploy:
+  skip_cleanup: true
   local_dir: public
   keep-history: true
   on:
     branch: main
 before_script:
   - "npm i -g gatsby"
-  - "npm i"
+  - "npm install"
 script:
   - "npm run test"
