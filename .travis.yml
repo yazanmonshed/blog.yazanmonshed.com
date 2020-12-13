@@ -11,5 +11,5 @@ deploy:
   on:
     branch: main
 before_script:
-  - "yarn add gobal gatsby"
+  - "yarn add global  gatsby"
   - "yarn install"
