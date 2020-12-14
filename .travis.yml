@@ -13,5 +13,3 @@ deploy:
 before_script:
   - "yarn add global  gatsby"
   - "yarn install"
-# script:
-#   - "npm run test"
