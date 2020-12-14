@@ -5,6 +5,7 @@ cache:
   directories:
   - node_modules
 deploy:
+  provider: github
   skip_cleanup: true
   local_dir: public
   keep-history: true
