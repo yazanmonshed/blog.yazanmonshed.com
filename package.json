@@ -13,7 +13,9 @@
     "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "test": "test --passWithNoTests",
+    
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "^2.7.4",
