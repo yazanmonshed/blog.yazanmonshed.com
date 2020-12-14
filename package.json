@@ -14,8 +14,8 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "test --passWithNoTests",
-    
+    "test": "test --passWithNoTests"
+
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "^2.7.4",
