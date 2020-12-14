@@ -14,4 +14,4 @@ before_script:
   - "yarn add global  gatsby"
   - "yarn install"
 script:
-  - "yarn test"
+  - "npm run test"
