@@ -4,6 +4,3 @@ node_js:
 
 dist: trusty
 sudo: false
-before_script:
-  - "yarn add global gatsby"
-  - "yarn install"

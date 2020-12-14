@@ -13,8 +13,7 @@
     "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "test --passWithNoTests"
+    "clean": "gatsby clean"
 
   },
   "dependencies": {
