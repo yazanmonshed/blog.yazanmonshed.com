@@ -96,17 +96,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ({
 
-/***/ "./.cache/_this_is_virtual_fs_path_/$virtual/lazy-client-sync-requires":
-/*!*****************************************************************************!*\
-  !*** ./.cache/_this_is_virtual_fs_path_/$virtual/lazy-client-sync-requires ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
 /***/ "./.cache/api-runner-ssr.js":
 /*!**********************************!*\
   !*** ./.cache/api-runner-ssr.js ***!
@@ -121,7 +110,7 @@ var plugins = [{
       "resolve": "/home/yazanmonshed/Desktop/blog.yazanmonshed.com/node_modules/gatsby-remark-images",
       "id": "0c1a4f1b-2b47-52f8-b507-0590421487b0",
       "name": "gatsby-remark-images",
-      "version": "3.6.0",
+      "version": "3.8.0",
       "pluginOptions": {
         "plugins": [],
         "maxWidth": 960,
@@ -296,6 +285,7 @@ module.exports = function (api, args, defaultReturn, argTransform) {
  * rendering.
  * @param {object} $0
  * @param {string} $0.pathname The pathname of the page currently being rendered.
+ * @param {ReactNode} $0.bodyComponent The React element to be rendered as the page body
  * @param {function} $0.replaceBodyHTMLString Call this with the HTML string
  * you render. **WARNING** if multiple plugins implement this API it's the
  * last plugin that "wins". TODO implement an automated warning against this.
@@ -489,27 +479,6 @@ exports.wrapPageElement = true;
  */
 
 exports.wrapRootElement = true;
-
-/***/ }),
-
-/***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/85add4b20f47a83c98fdb42cecfd26d4.js":
-/*!********************************************************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/85add4b20f47a83c98fdb42cecfd26d4.js ***!
-  \********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _content_posts_fantastic_beasts_and_where_to_find_them_SpotifyPlayer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../content/posts/fantastic-beasts-and-where-to-find-them/SpotifyPlayer */ "./content/posts/fantastic-beasts-and-where-to-find-them/SpotifyPlayer.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  SpotifyPlayer: _content_posts_fantastic_beasts_and_where_to_find_them_SpotifyPlayer__WEBPACK_IMPORTED_MODULE_0__["default"],
-  React: react__WEBPACK_IMPORTED_MODULE_1__
-});
 
 /***/ }),
 
@@ -747,64 +716,6 @@ var emitter = Object(mitt__WEBPACK_IMPORTED_MODULE_0__["default"])();
 
 /***/ }),
 
-/***/ "./.cache/ensure-page-component-in-bundle.js":
-/*!***************************************************!*\
-  !*** ./.cache/ensure-page-component-in-bundle.js ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var didCallServer = new Set();
-
-var ensureComponentInBundle = function ensureComponentInBundle(chunkName) {
-  return new Promise(function (resolve, reject) {
-    if (!didCallServer.has(chunkName)) {
-      var req = new XMLHttpRequest();
-      req.open("post", "/___client-page-visited", true);
-      req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-      req.send(JSON.stringify({
-        chunkName: chunkName
-      }));
-      didCallServer.add(chunkName);
-    } // Tell the server the user wants to visit this page
-    // to trigger it compiling the page component's code.
-    //
-    // Try for 30 seconds and then error.
-
-
-    var checkCount = 0;
-
-    var checkForBundle = function checkForBundle() {
-      checkCount += 1;
-
-      if (checkCount > 299) {
-        reject("Loading the page component " + chunkName + " timed out after 30 seconds");
-      } // Check if the bundle is included and return.
-
-
-      if (true) {
-        delete __webpack_require__.c[/*require.resolve*/(/*! $virtual/lazy-client-sync-requires */ "./.cache/_this_is_virtual_fs_path_/$virtual/lazy-client-sync-requires")];
-      }
-
-      var lazyRequires = __webpack_require__(/*! $virtual/lazy-client-sync-requires */ "./.cache/_this_is_virtual_fs_path_/$virtual/lazy-client-sync-requires");
-
-      if (lazyRequires.lazyComponents[chunkName]) {
-        resolve(lazyRequires.lazyComponents[chunkName]);
-      } else {
-        setTimeout(checkForBundle, 100);
-      }
-    };
-
-    checkForBundle();
-  });
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (ensureComponentInBundle);
-
-/***/ }),
-
 /***/ "./.cache/find-path.js":
 /*!*****************************!*\
   !*** ./.cache/find-path.js ***!
@@ -973,66 +884,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StaticQuery", function() { return StaticQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useStaticQuery", function() { return useStaticQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prefetchPathname", function() { return prefetchPathname; });
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var gatsby_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gatsby-link */ "./node_modules/gatsby-link/index.js");
-/* harmony import */ var gatsby_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(gatsby_link__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony reexport (default from non-harmony) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_3___default.a; });
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "withAssetPrefix", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_3__["withAssetPrefix"]; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var gatsby_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-link */ "./node_modules/gatsby-link/index.js");
+/* harmony import */ var gatsby_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gatsby_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony reexport (default from non-harmony) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_2___default.a; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "withAssetPrefix", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_2__["withAssetPrefix"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "withPrefix", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_3__["withPrefix"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "withPrefix", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_2__["withPrefix"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parsePath", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_3__["parsePath"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parsePath", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_2__["parsePath"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "navigate", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_3__["navigate"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "navigate", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_2__["navigate"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "push", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_3__["push"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "push", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_2__["push"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "replace", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_3__["replace"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "replace", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_2__["replace"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "navigateTo", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_3__["navigateTo"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "navigateTo", function() { return gatsby_link__WEBPACK_IMPORTED_MODULE_2__["navigateTo"]; });
 
-/* harmony import */ var gatsby_react_router_scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gatsby-react-router-scroll */ "./node_modules/gatsby-react-router-scroll/index.js");
-/* harmony import */ var gatsby_react_router_scroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(gatsby_react_router_scroll__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "useScrollRestoration", function() { return gatsby_react_router_scroll__WEBPACK_IMPORTED_MODULE_4__["useScrollRestoration"]; });
+/* harmony import */ var gatsby_react_router_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gatsby-react-router-scroll */ "./node_modules/gatsby-react-router-scroll/index.js");
+/* harmony import */ var gatsby_react_router_scroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(gatsby_react_router_scroll__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "useScrollRestoration", function() { return gatsby_react_router_scroll__WEBPACK_IMPORTED_MODULE_3__["useScrollRestoration"]; });
 
-/* harmony import */ var _public_page_renderer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./public-page-renderer */ "./.cache/public-page-renderer.js");
-/* harmony import */ var _public_page_renderer__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_page_renderer__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony reexport (default from non-harmony) */ __webpack_require__.d(__webpack_exports__, "PageRenderer", function() { return _public_page_renderer__WEBPACK_IMPORTED_MODULE_5___default.a; });
-/* harmony import */ var _loader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./loader */ "./.cache/loader.js");
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+/* harmony import */ var _public_page_renderer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./public-page-renderer */ "./.cache/public-page-renderer.js");
+/* harmony import */ var _public_page_renderer__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_page_renderer__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony reexport (default from non-harmony) */ __webpack_require__.d(__webpack_exports__, "PageRenderer", function() { return _public_page_renderer__WEBPACK_IMPORTED_MODULE_4___default.a; });
+/* harmony import */ var _loader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./loader */ "./.cache/loader.js");
 
 
 
 
 
 
-
-var prefetchPathname = _loader__WEBPACK_IMPORTED_MODULE_6__["default"].enqueue;
-var StaticQueryContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createContext({});
+var prefetchPathname = _loader__WEBPACK_IMPORTED_MODULE_5__["default"].enqueue;
+var StaticQueryContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext({});
 
 function StaticQueryDataRenderer(_ref) {
   var staticQueryData = _ref.staticQueryData,
       data = _ref.data,
       query = _ref.query,
       render = _ref.render;
-  var combinedStaticQueryData = staticQueryData;
-
-  if (({}).GATSBY_EXPERIMENTAL_LAZY_DEVJS) {
-    // when we remove the flag, we don't need to combine them
-    // w/ changes @pieh made.
-    combinedStaticQueryData = _objectSpread(_objectSpread({}, Object(_loader__WEBPACK_IMPORTED_MODULE_6__["getStaticQueryResults"])()), staticQueryData);
-  }
-
-  var finalData = data ? data.data : combinedStaticQueryData[query] && combinedStaticQueryData[query].data;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, finalData && render(finalData), !finalData && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, "Loading (StaticQuery)"));
+  var finalData = data ? data.data : staticQueryData[query] && staticQueryData[query].data;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, finalData && render(finalData), !finalData && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading (StaticQuery)"));
 }
 
 var StaticQuery = function StaticQuery(props) {
@@ -1040,8 +936,8 @@ var StaticQuery = function StaticQuery(props) {
       query = props.query,
       render = props.render,
       children = props.children;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StaticQueryContext.Consumer, null, function (staticQueryData) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StaticQueryDataRenderer, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StaticQueryContext.Consumer, null, function (staticQueryData) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StaticQueryDataRenderer, {
       data: data,
       query: query,
       render: render || children,
@@ -1051,11 +947,13 @@ var StaticQuery = function StaticQuery(props) {
 };
 
 var useStaticQuery = function useStaticQuery(query) {
-  if (typeof react__WEBPACK_IMPORTED_MODULE_1___default.a.useContext !== "function" && "development" === "development") {
+  var _context$query;
+
+  if (typeof react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext !== "function" && "development" === "development") {
     throw new Error("You're likely using a version of React that doesn't support Hooks\n" + "Please update React and ReactDOM to 16.8.0 or later to use the useStaticQuery hook.");
   }
 
-  var context = react__WEBPACK_IMPORTED_MODULE_1___default.a.useContext(StaticQueryContext); // query is a stringified number like `3303882` when wrapped with graphql, If a user forgets
+  var context = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(StaticQueryContext); // query is a stringified number like `3303882` when wrapped with graphql, If a user forgets
   // to wrap the query in a grqphql, then casting it to a Number results in `NaN` allowing us to
   // catch the misuse of the API and give proper direction
 
@@ -1063,43 +961,18 @@ var useStaticQuery = function useStaticQuery(query) {
     throw new Error("useStaticQuery was called with a string but expects to be called using `graphql`. Try this:\n\nimport { useStaticQuery, graphql } from 'gatsby';\n\nuseStaticQuery(graphql`" + query + "`);\n");
   }
 
-  var queryNotFound = false;
-
-  if (({}).GATSBY_EXPERIMENTAL_LAZY_DEVJS) {
-    var _staticQueryData$quer;
-
-    // Merge data loaded via socket.io & xhr
-    // when we remove the flag, we don't need to combine them
-    // w/ changes @pieh made.
-    var staticQueryData = _objectSpread(_objectSpread({}, Object(_loader__WEBPACK_IMPORTED_MODULE_6__["getStaticQueryResults"])()), context);
-
-    if ((_staticQueryData$quer = staticQueryData[query]) !== null && _staticQueryData$quer !== void 0 && _staticQueryData$quer.data) {
-      return staticQueryData[query].data;
-    } else {
-      queryNotFound = true;
-    }
+  if ((_context$query = context[query]) !== null && _context$query !== void 0 && _context$query.data) {
+    return context[query].data;
   } else {
-    var _context$query;
-
-    if ((_context$query = context[query]) !== null && _context$query !== void 0 && _context$query.data) {
-      return context[query].data;
-    } else {
-      queryNotFound = true;
-    }
-  }
-
-  if (queryNotFound) {
     throw new Error("The result of this StaticQuery could not be fetched.\n\n" + "This is likely a bug in Gatsby and if refreshing the page does not fix it, " + "please open an issue in https://github.com/gatsbyjs/gatsby/issues");
   }
-
-  return null;
 };
 
 StaticQuery.propTypes = {
-  data: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
-  render: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
-  children: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func
+  data: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+  render: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+  children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
 };
 
 function graphql() {
@@ -1301,29 +1174,6 @@ var BaseLoader = /*#__PURE__*/function () {
 
           if (jsonPayload.path === undefined) {
             throw new Error("not a valid pageData response");
-          } // In development, check if the page is in the bundle yet.
-
-
-          if ( true && ({}).GATSBY_EXPERIMENTAL_LAZY_DEVJS) {
-            var ensureComponentInBundle = __webpack_require__(/*! ./ensure-page-component-in-bundle */ "./.cache/ensure-page-component-in-bundle.js").default;
-
-            if (true) {
-              delete __webpack_require__.c[/*require.resolve*/(/*! $virtual/lazy-client-sync-requires */ "./.cache/_this_is_virtual_fs_path_/$virtual/lazy-client-sync-requires")];
-            }
-
-            var lazyRequires = __webpack_require__(/*! $virtual/lazy-client-sync-requires */ "./.cache/_this_is_virtual_fs_path_/$virtual/lazy-client-sync-requires");
-
-            if (lazyRequires.notVisitedPageComponents[jsonPayload.componentChunkName]) {
-              // Tell the server the user wants to visit this page
-              // to trigger it including the page component's code in the
-              // commons bundles.
-              ensureComponentInBundle(jsonPayload.componentChunkName);
-              return new Promise(function (resolve) {
-                return setTimeout(function () {
-                  return resolve(_this2.fetchPageDataJson(loadObj));
-                }, 100);
-              });
-            }
           }
 
           return Object.assign(loadObj, {
@@ -1932,60 +1782,6 @@ function stripPrefix(str, prefix) {
 
   return str;
 }
-
-/***/ }),
-
-/***/ "./content/posts/fantastic-beasts-and-where-to-find-them/SpotifyPlayer.js":
-/*!********************************************************************************!*\
-  !*** ./content/posts/fantastic-beasts-and-where-to-find-them/SpotifyPlayer.js ***!
-  \********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* eslint react/no-unknown-property: 0 */
-
-/* eslint react/prefer-stateless-function: 0 */
-
-/**
- * Spotify player iframe widget
- *
- * @author Alexander Wallin <office@alexanderwallin.com>
- * @see https://developer.spotify.com/technologies/widgets/spotify-play-button/
- */
- // Size presets, defined by Spotify
-
-var sizePresets = {
-  large: {
-    width: 300,
-    height: 380
-  },
-  compact: {
-    width: 300,
-    height: 80
-  }
-};
-
-function SpotifyPlayer(_ref) {
-  var uri = _ref.uri,
-      view = _ref.view,
-      theme = _ref.theme,
-      size = _ref.size;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-    title: "Spotify",
-    className: "SpotifyPlayer",
-    src: "https://embed.spotify.com/?uri=" + uri + "&view=" + view + "&theme=" + theme,
-    width: sizePresets[size].width,
-    height: sizePresets[size].height,
-    frameBorder: "0",
-    allowtransparency: "true"
-  });
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (SpotifyPlayer);
 
 /***/ }),
 
@@ -5317,14 +5113,14 @@ var weakMemoize = function weakMemoize(func) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_reduce__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.reduce */ "./node_modules/core-js/modules/es.array.reduce.js");
-/* harmony import */ var core_js_modules_es_array_reduce__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_reduce__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.reduce.js */ "./node_modules/core-js/modules/es.array.reduce.js");
+/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _babel_runtime_helpers_esm_interopRequireWildcard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/esm/interopRequireWildcard.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var regenerator_runtime_runtime_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! regenerator-runtime/runtime.js */ "./node_modules/regenerator-runtime/runtime.js");
+/* harmony import */ var regenerator_runtime_runtime_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
@@ -5523,8 +5319,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var regenerator_runtime_runtime_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime.js */ "./node_modules/regenerator-runtime/runtime.js");
+/* harmony import */ var regenerator_runtime_runtime_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var theme_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! theme-ui */ "./node_modules/theme-ui/dist/index.esm.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
@@ -8041,7 +7837,7 @@ var shadow = Object(_styled_system_core__WEBPACK_IMPORTED_MODULE_0__["system"])(
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "props", function() { return props; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createShouldForwardProp", function() { return createShouldForwardProp; });
-/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/memoize */ "./node_modules/@emotion/memoize/dist/memoize.esm.js");
+/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/memoize */ "./node_modules/@styled-system/should-forward-prop/node_modules/@emotion/memoize/dist/emotion-memoize.esm.js");
 /* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/is-prop-valid */ "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.esm.js");
 /* harmony import */ var styled_system__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-system */ "./node_modules/styled-system/dist/index.esm.js");
 
@@ -8056,6 +7852,28 @@ var createShouldForwardProp = function createShouldForwardProp(props) {
   });
 };
 /* harmony default export */ __webpack_exports__["default"] = (createShouldForwardProp(props));
+
+
+/***/ }),
+
+/***/ "./node_modules/@styled-system/should-forward-prop/node_modules/@emotion/memoize/dist/emotion-memoize.esm.js":
+/*!*******************************************************************************************************************!*\
+  !*** ./node_modules/@styled-system/should-forward-prop/node_modules/@emotion/memoize/dist/emotion-memoize.esm.js ***!
+  \*******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function memoize(fn) {
+  var cache = Object.create(null);
+  return function (arg) {
+    if (cache[arg] === undefined) cache[arg] = fn(arg);
+    return cache[arg];
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (memoize);
 
 
 /***/ }),
@@ -24038,7 +23856,7 @@ var store = __webpack_require__(/*! ../internals/shared-store */ "./node_modules
 (module.exports = function (key, value) {
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
-  version: '3.8.0',
+  version: '3.8.1',
   mode: IS_PURE ? 'pure' : 'global',
   copyright: '© 2020 Denis Pushkarev (zloirock.ru)'
 });
@@ -24878,7 +24696,7 @@ exports.defaultOptions = defaultOptions;
 "use strict";
 
 
-__webpack_require__(/*! core-js/modules/es.array.reduce */ "./node_modules/core-js/modules/es.array.reduce.js");
+__webpack_require__(/*! core-js/modules/es.array.reduce.js */ "./node_modules/core-js/modules/es.array.reduce.js");
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
@@ -25272,11 +25090,9 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var scope_0 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/85add4b20f47a83c98fdb42cecfd26d4.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/85add4b20f47a83c98fdb42cecfd26d4.js").default;
+var scope_0 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js").default;
 
-var scope_1 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js").default;
-
-/* harmony default export */ __webpack_exports__["default"] = (Object.assign({}, scope_0, scope_1));
+/* harmony default export */ __webpack_exports__["default"] = (Object.assign({}, scope_0));
 
 /***/ }),
 
@@ -25289,8 +25105,8 @@ var scope_1 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scop
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_reduce__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.reduce */ "./node_modules/core-js/modules/es.array.reduce.js");
-/* harmony import */ var core_js_modules_es_array_reduce__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_reduce__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.reduce.js */ "./node_modules/core-js/modules/es.array.reduce.js");
+/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
@@ -26108,8 +25924,17 @@ var ScrollHandler = /*#__PURE__*/function (_React$Component) {
     if (key) {
       scrollPosition = this._stateStorage.read(this.props.location, key);
     }
+    /**  There are two pieces of state: the browser url and
+     * history state which keeps track of scroll position
+     * Native behaviour prescribes that we ought to restore scroll position
+     * when a user navigates back in their browser (this is the `POP` action)
+     * Currently, reach router has a bug that prevents this at https://github.com/reach/router/issues/228
+     * So we _always_ stick to the url as a source of truth — if the url
+     * contains a hash, we scroll to it
+     */
 
-    if (hash && scrollPosition === 0) {
+
+    if (hash) {
       this.scrollToHash(decodeURI(hash), prevProps);
     } else {
       this.windowScroll(scrollPosition, prevProps);
