@@ -1,0 +1,168 @@
+---
+title: Getting Started with Podman on Fedora
+date: 2020-11-25
+tags:
+  - containers
+  - podman
+  - docker
+---
+
+
+in this article, we will introduce to podman and how using it with small application build using nodejs. the app will be very simple and clean.
+
+[podman](https://podman.io) is a daemonless container engine for developing, managing, and running OCI Containers on your Linux System. podman command the same
+[docker](https://docker.com) just type in your terminal alias docker=podman if you have docker already installed.
+
+
+
+## install Podman
+
+Podman is by default installed in fedora, but if you don’t have it for any reason you can install it across type the following command
+
+
+```bash
+$ sudo dnf install podman
+```
+
+for fedora silverblue users podman is already installed in your OS, now you can run hello world image to ensure is everything working Good
+
+```bash
+$ podman pull hello-world 
+$ podman run hello-world
+```
+
+if everything is working well you will show the following output in your terminal
+
+```bash
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+To generate this message, Docker took the following steps:
+The Docker client contacted the Docker daemon.
+The Docker daemon pulled the "hello-world" image from the Docker Hub.
+(amd64)
+The Docker daemon created a new container from that image which runs the
+executable that produces the output you are currently reading.
+The Docker daemon streamed that output to the Docker client, which sent it
+to your terminal.
+To try something more ambitious, you can run an Ubuntu container with:
+$ docker run -it ubuntu bash
+Share images, automate workflows, and more with a free Docker ID:
+https://hub.docker.com/
+For more examples and ideas, visit:
+https://docs.docker.com/get-started
+```
+
+## simple Nodejs App
+
+First, we will create a folder webapp , type the following command in your terminal
+
+```bash
+mkdir webapp && cd webapp
+```
+
+then create file package.json this file includes all dependencies that project need to work well copy the following code inside package.json
+
+```js 
+
+{
+       "dependencies": {
+
+               "express": "*"
+       },
+
+       "scripts": {
+
+
+               "start": "node index.js"
+
+       }
+
+}
+```
+then create file index.js and add the following code here
+
+```js 
+
+
+app.get('/', (req, res)=> {
+
+       res.send("Hello World!")
+
+});
+
+
+
+app.listen(8081, () => {
+
+
+       console.log("Listing on port 8080");
+
+
+});
+```
+you can download the source code from this [here](https://github.com/YazanALMonshed/webapp)
+
+## Create Dockerfile
+
+first of all, create a file called **Dockerfile** make sure the first character is capital, NOT small then add the following code here
+
+
+
+```bash 
+FROM node:alpine
+
+WORKDIR usr/app
+
+COPY ./ ./
+
+RUN npm install
+
+CMD ["npm", "start"]
+```
+
+be sure you inside the folder webapp then show the image and then type the following command
+
+
+```bash
+podman build .
+```
+
+make sure to add **dot** and now this image was created in your machine you can show this image by the following command
+
+```bash
+podman images
+```
+
+and the last step is run the image inside a container, type the following command in your terminal
+
+```bash 
+podman run -p 8080:8080 <image-name>
+```
+
+and the final step is to open your browser in localhost:8080 and you will see your app works
+
+## Stopping and Remove Container
+
+to exit from container across typing CTR – C and you can remove container by using container id
+
+```bash
+podman ps -a
+
+podman stop <container_id>
+```
+
+and the last thing you can delete the images from your machine by using the following command
+
+```bash
+podman rmi <image_id>
+```
+
+
+
+
+
+
+
+
+
