@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  blog:
+    build: .
+      # context: ./blog
+      # dockerfile: Dockerfile
+
+    volumes:
+      - ./blog/src:/blog/src
+    ports:
+      - 8000:8000
+      
