@@ -1,12 +1,18 @@
-FROM node:latest 
+FROM node:13
 
-WORKDIR /blog
+WORKDIR /usr/src/app
 
-COPY . . 
+COPY package.json .
 
-RUN npm update
+RUN yarn global add gatsby-cli
 
-RUN npm install 
+RUN yarn install
 
-CMD ["npm","run", "start"]
+COPY gatsby-config.js .
 
+# Optionally, copy your .env file to the container filesystem
+COPY .env .
+
+EXPOSE 8000
+
+CMD ["gatsby", "develop", "-H", "0.0.0.0"]
